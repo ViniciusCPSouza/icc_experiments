@@ -1,0 +1,39 @@
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.1 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.6 seconds.
+[Spark] Solution found in 0.6 seconds.
+Solving ICC problem
+Composing values
+Transforming edu.mit.icc_service_messages.R$layout... 
+Transforming edu.mit.icc_service_messages.ActivityMessenger... 
+Transforming edu.mit.icc_service_messages.ActivityMessenger$1... 
+Transforming edu.mit.icc_service_messages.MessengerService... 
+Transforming edu.mit.icc_service_messages.MessengerService$IncomingHandler... 
+Transforming edu.mit.icc_service_messages.R$string... 
+Transforming edu.mit.icc_service_messages.R$id... 
+Transforming edu.mit.icc_service_messages.BuildConfig... 
+Transforming edu.mit.icc_service_messages.R... 
+Transforming edu.mit.icc_service_messages.R$attr... 
+
+Manifest file for edu.mit.icc_service_messages version 1
+  Activities:
+    edu.mit.icc_service_messages.ActivityMessenger
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.DEFAULT, android.intent.category.LAUNCHER]
+
+  Activity Aliases:
+  Services:
+    edu.mit.icc_service_messages.MessengerService
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:
+  - edu/mit/icc_service_messages/ActivityMessenger/onStart()
+Intent value: 1 possible value(s):
+Package: edu/mit/icc_service_messages, Class: edu/mit/icc_service_messages/MessengerService, 
+

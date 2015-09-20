@@ -1,0 +1,3 @@
+Possible Activity Hijacking: edu/mit/icc_pass_action_string_through_api/OutFlowActivity/onCreate(Landroid/os/Bundle;)@0, Source Line: 0, hasExtras=true, hasRead=false, hasWrite=false
+Possible Malicious Activity Launch: edu/mit/icc_pass_action_string_through_api/InFlowActivity, 0
+Possible Malicious Activity Launch: edu/mit/icc_pass_action_string_through_api/IsolateActivity, 0

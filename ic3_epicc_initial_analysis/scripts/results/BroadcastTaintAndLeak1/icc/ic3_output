@@ -1,0 +1,189 @@
+Warning: java.lang.ref.Finalizer is a phantom class!
+[main] INFO  soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator  - Generated main method:
+    public static void dummyMainMethod()
+    {
+        int $i0;
+        edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest $r0;
+        android.os.Bundle $r1;
+
+        $i0 = 0;
+
+     label0:
+        if $i0 == 0 goto label4;
+
+        $r0 = new edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest;
+        specialinvoke $r0.<edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest: void <init>()>();
+        if $i0 == 1 goto label4;
+
+     label1:
+        $r1 = new android.os.Bundle;
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r0.<edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest: void onCreate(android.os.Bundle)>($r1);
+        $r1 = null;
+
+     label2:
+        if $i0 == 3 goto label1;
+
+        if $i0 == 4 goto label3;
+
+        if $i0 == 5 goto label1;
+
+        if $i0 == 6 goto label2;
+
+     label3:
+        virtualinvoke $r0.<edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest: void onDestroy()>();
+        if $i0 == 7 goto label4;
+
+     label4:
+        if $i0 == 8 goto label0;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+Callback analysis done.
+Found 0 layout controls in file res/layout/main.xml
+Found 1 layout controls in file res/layout/my_simple_list_item.xml
+Transforming dummyMainClass... 
+Transforming edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest... 
+Warning: java.lang.ref.Finalizer is a phantom class!
+[main] INFO  soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator  - Generated main method:
+    public static void dummyMainMethod()
+    {
+        int $i0;
+        edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest $r0;
+        android.os.Bundle $r1;
+
+        $i0 = 0;
+
+     label0:
+        if $i0 == 0 goto label5;
+
+        $r0 = new edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest;
+        specialinvoke $r0.<edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest: void <init>()>();
+        if $i0 == 1 goto label5;
+
+     label1:
+        $r1 = new android.os.Bundle;
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r0.<edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest: void onCreate(android.os.Bundle)>($r1);
+        $r1 = null;
+
+     label2:
+        if $i0 == 2 goto label3;
+
+        staticinvoke <edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest: void <clinit>()>();
+
+     label3:
+        if $i0 == 3 goto label2;
+
+        if $i0 == 4 goto label2;
+
+        if $i0 == 5 goto label2;
+
+        if $i0 == 6 goto label1;
+
+        if $i0 == 7 goto label4;
+
+        if $i0 == 8 goto label1;
+
+        if $i0 == 9 goto label2;
+
+     label4:
+        virtualinvoke $r0.<edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest: void onDestroy()>();
+        if $i0 == 10 goto label5;
+
+     label5:
+        if $i0 == 11 goto label0;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+Running incremental callback analysis for 1 components...
+Incremental callback analysis done.
+Transforming dummyMainClass... 
+Transforming edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest... 
+[main] INFO  edu.psu.cse.siis.ic3.SetupApplication  - Entry point calculation done.
+[main] INFO  soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator  - Generated main method:
+    public static void dummyMainMethod()
+    {
+        int $i0;
+        edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest $r0;
+        android.os.Bundle $r1;
+
+        $i0 = 0;
+
+     label0:
+        if $i0 == 0 goto label5;
+
+        $r0 = new edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest;
+        specialinvoke $r0.<edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest: void <init>()>();
+        if $i0 == 1 goto label5;
+
+     label1:
+        $r1 = new android.os.Bundle;
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r0.<edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest: void onCreate(android.os.Bundle)>($r1);
+        $r1 = null;
+
+     label2:
+        if $i0 == 2 goto label3;
+
+        staticinvoke <edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest: void <clinit>()>();
+
+     label3:
+        if $i0 == 3 goto label2;
+
+        if $i0 == 4 goto label2;
+
+        if $i0 == 5 goto label2;
+
+        if $i0 == 6 goto label1;
+
+        if $i0 == 7 goto label4;
+
+        if $i0 == 8 goto label1;
+
+        if $i0 == 9 goto label2;
+
+     label4:
+        virtualinvoke $r0.<edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest: void onDestroy()>();
+        if $i0 == 10 goto label5;
+
+     label5:
+        if $i0 == 11 goto label0;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.0 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.1 seconds.
+[Spark] Solution found in 0.1 seconds.
+DBG:CCRefVisitor.caseStaticFieldRef v=<edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest: java.lang.String ACTION> class= soot.jimple.StaticFieldRef type= java.lang.String type-class= soot.RefType
+[main] INFO  edu.psu.cse.siis.coal.PropagationSceneTransformer  - Solving propagation problem (iteration 0)
+[main] INFO  edu.psu.cse.siis.coal.PropagationSceneTransformer  - Reached a fixed point
+Transforming android.content.Intent... 
+Transforming android.content.IntentFilter... 
+Transforming android.os.Bundle... 
+Transforming android.content.ComponentName... 
+Transforming android.app.Activity... 
+Transforming dummyMainClass... 
+Transforming edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest... 
+*****Result*****
+edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest/void onCreate(android.os.Bundle) : virtualinvoke r0.<edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>(r2, r3)
+    0 : [edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest$1]
+    1 : Value: 1 path values
+  actions=[edu.mit.icc_broadcast_programmatic_intentfilter.action, ],
+
+
+edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest/void onDestroy() : virtualinvoke r0.<edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest: void sendBroadcast(android.content.Intent)>(r4)
+    0 : Value: 1 path values
+  action=[edu.mit.icc_broadcast_programmatic_intentfilter.action, ],extras=[imei, ],
+
+
+[main] INFO  edu.psu.cse.siis.ic3.ResultProcessor  - edu.mit.icc_broadcast_programmatic_intentfilter 14 22 1636 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 1 0 0 0 0 0 0 0 2 127 4727 65 1094 19 181 0 7 1850 191 8137
+

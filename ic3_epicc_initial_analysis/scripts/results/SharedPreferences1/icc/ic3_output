@@ -1,0 +1,235 @@
+Warning: java.lang.ref.Finalizer is a phantom class!
+[main] INFO  soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator  - Generated main method:
+    public static void dummyMainMethod()
+    {
+        int $i0;
+        edu.mit.shared_preferences.MainActivity $r0;
+        android.os.Bundle $r1, $r3;
+        edu.mit.shared_preferences.AnotherActivity $r2;
+
+        $i0 = 0;
+
+     label0:
+        if $i0 == 0 goto label4;
+
+        $r0 = new edu.mit.shared_preferences.MainActivity;
+        specialinvoke $r0.<edu.mit.shared_preferences.MainActivity: void <init>()>();
+        if $i0 == 1 goto label4;
+
+     label1:
+        $r1 = new android.os.Bundle;
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r0.<edu.mit.shared_preferences.MainActivity: void onCreate(android.os.Bundle)>($r1);
+        $r1 = null;
+
+     label2:
+        if $i0 == 3 goto label1;
+
+        if $i0 == 4 goto label3;
+
+        if $i0 == 5 goto label1;
+
+        if $i0 == 6 goto label2;
+
+     label3:
+        if $i0 == 7 goto label4;
+
+     label4:
+        if $i0 == 8 goto label8;
+
+        $r2 = new edu.mit.shared_preferences.AnotherActivity;
+        specialinvoke $r2.<edu.mit.shared_preferences.AnotherActivity: void <init>()>();
+        if $i0 == 9 goto label8;
+
+     label5:
+        $r3 = new android.os.Bundle;
+        specialinvoke $r3.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r2.<edu.mit.shared_preferences.AnotherActivity: void onCreate(android.os.Bundle)>($r3);
+        $r3 = null;
+
+     label6:
+        if $i0 == 11 goto label5;
+
+        if $i0 == 12 goto label7;
+
+        if $i0 == 13 goto label5;
+
+        if $i0 == 14 goto label6;
+
+     label7:
+        if $i0 == 15 goto label8;
+
+     label8:
+        if $i0 == 16 goto label0;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+Callback analysis done.
+Warning: TextView is a phantom class!
+Warning: edu.mit.shared_preferences.TextView is a phantom class!
+Warning: android.view.TextView is a phantom class!
+Found 0 layout controls in file res/layout/activity_main.xml
+Transforming dummyMainClass... 
+Transforming edu.mit.shared_preferences.MainActivity... 
+Transforming edu.mit.shared_preferences.AnotherActivity... 
+Warning: java.lang.ref.Finalizer is a phantom class!
+[main] INFO  soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator  - Generated main method:
+    public static void dummyMainMethod()
+    {
+        int $i0;
+        edu.mit.shared_preferences.MainActivity $r0;
+        android.os.Bundle $r1, $r3;
+        edu.mit.shared_preferences.AnotherActivity $r2;
+
+        $i0 = 0;
+
+     label0:
+        if $i0 == 0 goto label4;
+
+        $r0 = new edu.mit.shared_preferences.MainActivity;
+        specialinvoke $r0.<edu.mit.shared_preferences.MainActivity: void <init>()>();
+        if $i0 == 1 goto label4;
+
+     label1:
+        $r1 = new android.os.Bundle;
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r0.<edu.mit.shared_preferences.MainActivity: void onCreate(android.os.Bundle)>($r1);
+        $r1 = null;
+
+     label2:
+        if $i0 == 4 goto label1;
+
+        if $i0 == 5 goto label3;
+
+        if $i0 == 6 goto label1;
+
+        if $i0 == 7 goto label2;
+
+     label3:
+        if $i0 == 8 goto label4;
+
+     label4:
+        if $i0 == 9 goto label8;
+
+        $r2 = new edu.mit.shared_preferences.AnotherActivity;
+        specialinvoke $r2.<edu.mit.shared_preferences.AnotherActivity: void <init>()>();
+        if $i0 == 10 goto label8;
+
+     label5:
+        $r3 = new android.os.Bundle;
+        specialinvoke $r3.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r2.<edu.mit.shared_preferences.AnotherActivity: void onCreate(android.os.Bundle)>($r3);
+        $r3 = null;
+
+     label6:
+        if $i0 == 13 goto label5;
+
+        if $i0 == 14 goto label7;
+
+        if $i0 == 15 goto label5;
+
+        if $i0 == 16 goto label6;
+
+     label7:
+        if $i0 == 17 goto label8;
+
+     label8:
+        if $i0 == 18 goto label0;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+Running incremental callback analysis for 2 components...
+Incremental callback analysis done.
+Transforming dummyMainClass... 
+Transforming edu.mit.shared_preferences.MainActivity... 
+Transforming edu.mit.shared_preferences.AnotherActivity... 
+[main] INFO  edu.psu.cse.siis.ic3.SetupApplication  - Entry point calculation done.
+[main] INFO  soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator  - Generated main method:
+    public static void dummyMainMethod()
+    {
+        int $i0;
+        edu.mit.shared_preferences.MainActivity $r0;
+        android.os.Bundle $r1, $r3;
+        edu.mit.shared_preferences.AnotherActivity $r2;
+
+        $i0 = 0;
+
+     label0:
+        if $i0 == 0 goto label4;
+
+        $r0 = new edu.mit.shared_preferences.MainActivity;
+        specialinvoke $r0.<edu.mit.shared_preferences.MainActivity: void <init>()>();
+        if $i0 == 1 goto label4;
+
+     label1:
+        $r1 = new android.os.Bundle;
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r0.<edu.mit.shared_preferences.MainActivity: void onCreate(android.os.Bundle)>($r1);
+        $r1 = null;
+
+     label2:
+        if $i0 == 4 goto label1;
+
+        if $i0 == 5 goto label3;
+
+        if $i0 == 6 goto label1;
+
+        if $i0 == 7 goto label2;
+
+     label3:
+        if $i0 == 8 goto label4;
+
+     label4:
+        if $i0 == 9 goto label8;
+
+        $r2 = new edu.mit.shared_preferences.AnotherActivity;
+        specialinvoke $r2.<edu.mit.shared_preferences.AnotherActivity: void <init>()>();
+        if $i0 == 10 goto label8;
+
+     label5:
+        $r3 = new android.os.Bundle;
+        specialinvoke $r3.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r2.<edu.mit.shared_preferences.AnotherActivity: void onCreate(android.os.Bundle)>($r3);
+        $r3 = null;
+
+     label6:
+        if $i0 == 13 goto label5;
+
+        if $i0 == 14 goto label7;
+
+        if $i0 == 15 goto label5;
+
+        if $i0 == 16 goto label6;
+
+     label7:
+        if $i0 == 17 goto label8;
+
+     label8:
+        if $i0 == 18 goto label0;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.0 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.1 seconds.
+[Spark] Solution found in 0.1 seconds.
+[main] INFO  edu.psu.cse.siis.coal.PropagationSceneTransformer  - Solving propagation problem (iteration 0)
+[main] INFO  edu.psu.cse.siis.coal.PropagationSceneTransformer  - Reached a fixed point
+Transforming android.content.Intent... 
+Transforming android.content.IntentFilter... 
+Transforming android.os.Bundle... 
+Transforming android.content.ComponentName... 
+Transforming android.app.Activity... 
+Transforming dummyMainClass... 
+Transforming edu.mit.shared_preferences.MainActivity... 
+Transforming edu.mit.shared_preferences.AnotherActivity... 
+*****Result*****
+[main] INFO  edu.psu.cse.siis.ic3.ResultProcessor  - edu.mit.shared_preferences 17 15 898 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 108 4577 26 1169 12 245 0 5 1742 183 7960
+

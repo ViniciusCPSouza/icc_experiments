@@ -9,8 +9,6 @@
 # Usage: ./run_experiments.sh
 # ---------------------------
 
-CONCURRENT_APKS=1
-
 APK_COUNT=0
 
 for apk in `ls apks`;
@@ -18,11 +16,11 @@ do
 
   APK_COUNT=$(($APK_COUNT + 1))
 
-  echo "----------------"
-  echo "Target APK #$APK_COUNT: $apk"
-
   apk_path="`pwd`/apks/$apk"
   apk_name="`echo $apk | cut -d . -f 1`"
+
+  echo "----------------"
+  echo "Target APK #$APK_COUNT: $apk_name"
 
   echo -e "\n"
   echo "Retargeting the application..."
@@ -32,13 +30,13 @@ do
   mkdir -p "$dare_output_dir"
   ./dare -d "$dare_output_dir" "$apk_path" &> /dev/null
 
-  retargeted_dir="$dare_output_dir/retargeted/$apk_name"
+  retargeted_dir="$dare_output_dir/retargeted/$apk_name/"
 
   # -- run epicc on the background and get its PID
   epicc_cmd="java -Xmx2g -jar epicc -apk \"$apk_path\" -android-directory \
             \"$retargeted_dir\" -cp android -icc-study epicc_results"
 
-  { time { $epicc_cmd > epicc_output; }; } &> eppic_time &
+  { time { eval $epicc_cmd > epicc_output; }; } &> epicc_time &
 
   epicc_pid="$!"
 
@@ -46,14 +44,14 @@ do
   ic3_cmd="java -Xmx2g -jar ic3 -apkormanifest \"$apk_path\" \
            -input \"$retargeted_dir\" -cp android -output ic3_results"
 
-  { time { $ic3_cmd > ic3_output; }; } &> ic3_time &
+  { time { eval $ic3_cmd > ic3_output; }; } &> ic3_time &
 
   ic3_pid="$!"
 
   # -- printing some info
   echo -e "\n"
-  echo "Epicc is running on apk \"$apk\", process id: $epicc_pid"
-  echo "IC3 is running on apk \"$apk\", process id: $ic3_pid"
+  echo "Epicc is running on apk \"$apk\", with PID: $epicc_pid"
+  echo "IC3 is running on apk \"$apk\", with PID: $ic3_pid"
 
   echo -e "\n"
   echo "Waiting for Epicc and IC3 to finish their analysis..."
@@ -90,12 +88,13 @@ do
   rm -f ic3_output
   rm -f epicc_output
 
+  rm -rf sootOutput
+
 done
 
 echo -e "\n"
 echo "****************"
 echo "All $APK_COUNT apks were analysed!"
 
-# TODO: Consolidate the results
 # -- Consolidating the results in a spreadsheet
-# ...
+./consolidate.py results

@@ -1,0 +1,2 @@
+Possible Broadcast Theft (Sniffing): edu/mit/icc_broadcast_programmatic_intentfilter/BroadcastTest/onDestroy()@0, Source Line: 0, hasExtras=true, hasRead=false, hasWrite=false
+Possible Malicious Broadcast Injection: firstpart*edu/mit/icc_broadcast_programmatic_intentfilter/BroadcastTest/onCreate(Landroid/os/Bundle;)@0, 0

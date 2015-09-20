@@ -1,0 +1,39 @@
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.0 seconds.
+[Spark] Type masks in 0.1 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.0 seconds.
+[Spark] Solution found in 0.0 seconds.
+Solving ICC problem
+Composing values
+Transforming edu.mit.shared_preferences.R$id... 
+Transforming edu.mit.shared_preferences.MainActivity... 
+Transforming edu.mit.shared_preferences.R$dimen... 
+Transforming edu.mit.shared_preferences.R... 
+Transforming edu.mit.shared_preferences.AnotherActivity... 
+Transforming edu.mit.shared_preferences.R$menu... 
+Transforming edu.mit.shared_preferences.BuildConfig... 
+Transforming edu.mit.shared_preferences.R$drawable... 
+Transforming edu.mit.shared_preferences.R$string... 
+Transforming edu.mit.shared_preferences.R$layout... 
+Transforming edu.mit.shared_preferences.R$style... 
+Transforming edu.mit.shared_preferences.R$attr... 
+
+Manifest file for edu.mit.shared_preferences version 1
+  Activities:
+    edu.mit.shared_preferences.MainActivity
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+    edu.mit.shared_preferences.AnotherActivity
+      Intent filter:
+        Actions: [edu.mit.DroidBench]
+
+  Activity Aliases:
+  Services:
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:

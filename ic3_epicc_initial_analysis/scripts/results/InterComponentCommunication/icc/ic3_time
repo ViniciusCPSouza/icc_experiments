@@ -1,0 +1,16 @@
+java.io.FileNotFoundException: /home/vinicius/Coding/Monografia/experiments/ic3_epicc_initial_analysis/scripts/retargeted/InterComponentCommunication/retargeted/InterComponentCommunication (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:215)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:145)
+	at java.util.jar.JarFile.<init>(JarFile.java:154)
+	at java.util.jar.JarFile.<init>(JarFile.java:118)
+	at edu.psu.cse.siis.coal.Analysis.computeAnalysisClassesInJar(Analysis.java:272)
+	at edu.psu.cse.siis.coal.Analysis.computeAnalysisClasses(Analysis.java:221)
+	at edu.psu.cse.siis.ic3.Ic3Analysis.setApplicationClasses(Ic3Analysis.java:221)
+	at edu.psu.cse.siis.ic3.Ic3Analysis.setApplicationClasses(Ic3Analysis.java:64)
+	at edu.psu.cse.siis.coal.Analysis.performAnalysis(Analysis.java:64)
+	at edu.psu.cse.siis.ic3.Main.main(Main.java:14)
+
+real	0m0.321s
+user	0m0.429s
+sys	0m0.005s

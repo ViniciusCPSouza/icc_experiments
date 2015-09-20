@@ -1,0 +1,43 @@
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.2 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.1 seconds.
+[Spark] Solution found in 0.1 seconds.
+Solving ICC problem
+Composing values
+Transforming edu.mit.icc_broadcast_programmatic_intentfilter.R$id... 
+Transforming edu.mit.icc_broadcast_programmatic_intentfilter.BuildConfig... 
+Transforming edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest... 
+Transforming edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest$1... 
+Transforming edu.mit.icc_broadcast_programmatic_intentfilter.R$attr... 
+Transforming edu.mit.icc_broadcast_programmatic_intentfilter.R... 
+Transforming edu.mit.icc_broadcast_programmatic_intentfilter.R$drawable... 
+Transforming edu.mit.icc_broadcast_programmatic_intentfilter.R$layout... 
+Transforming edu.mit.icc_broadcast_programmatic_intentfilter.R$string... 
+
+Manifest file for edu.mit.icc_broadcast_programmatic_intentfilter version 1
+  Activities:
+    edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+
+  Activity Aliases:
+  Services:
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:
+  - edu/mit/icc_broadcast_programmatic_intentfilter/BroadcastTest/onCreate(Landroid/os/Bundle;)
+Type: edu.mit.icc_broadcast_programmatic_intentfilter.BroadcastTest$1
+No permission
+Intent Filter value: 1 possible value(s):
+Actions: [<any_string>], 
+
+  - edu/mit/icc_broadcast_programmatic_intentfilter/BroadcastTest/onDestroy()
+Intent value: 1 possible value(s):
+Action: <any_string>, Extras: [imei], 
+

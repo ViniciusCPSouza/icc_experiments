@@ -1,0 +1,2 @@
+Possible Malicious Activity Launch: edu/mit/icc_componentname_class_constant/InFlowActivity, 0
+Possible Malicious Activity Launch: edu/mit/icc_componentname_class_constant/IsolateActivity, 0

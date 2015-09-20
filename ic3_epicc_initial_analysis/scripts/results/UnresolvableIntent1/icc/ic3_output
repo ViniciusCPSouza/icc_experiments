@@ -1,0 +1,351 @@
+Warning: java.lang.ref.Finalizer is a phantom class!
+[main] INFO  soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator  - Generated main method:
+    public static void dummyMainMethod()
+    {
+        int $i0;
+        edu.mit.icc_unresolvable_intent.InFlowActivity $r0;
+        android.os.Bundle $r1, $r3, $r5;
+        edu.mit.icc_unresolvable_intent.OutFlowActivity $r2;
+        edu.mit.icc_unresolvable_intent.InFlowActivity2 $r4;
+
+        $i0 = 0;
+
+     label0:
+        if $i0 == 0 goto label4;
+
+        $r0 = new edu.mit.icc_unresolvable_intent.InFlowActivity;
+        specialinvoke $r0.<edu.mit.icc_unresolvable_intent.InFlowActivity: void <init>()>();
+        if $i0 == 1 goto label4;
+
+     label1:
+        $r1 = new android.os.Bundle;
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r0.<edu.mit.icc_unresolvable_intent.InFlowActivity: void onCreate(android.os.Bundle)>($r1);
+        $r1 = null;
+
+     label2:
+        if $i0 == 3 goto label1;
+
+        if $i0 == 4 goto label3;
+
+        if $i0 == 5 goto label1;
+
+        if $i0 == 6 goto label2;
+
+     label3:
+        if $i0 == 7 goto label4;
+
+     label4:
+        if $i0 == 8 goto label8;
+
+        $r2 = new edu.mit.icc_unresolvable_intent.OutFlowActivity;
+        specialinvoke $r2.<edu.mit.icc_unresolvable_intent.OutFlowActivity: void <init>()>();
+        if $i0 == 9 goto label8;
+
+     label5:
+        $r3 = new android.os.Bundle;
+        specialinvoke $r3.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r2.<edu.mit.icc_unresolvable_intent.OutFlowActivity: void onCreate(android.os.Bundle)>($r3);
+        $r3 = null;
+
+     label6:
+        if $i0 == 11 goto label5;
+
+        if $i0 == 12 goto label7;
+
+        if $i0 == 13 goto label5;
+
+        if $i0 == 14 goto label6;
+
+     label7:
+        if $i0 == 15 goto label8;
+
+     label8:
+        if $i0 == 16 goto label12;
+
+        $r4 = new edu.mit.icc_unresolvable_intent.InFlowActivity2;
+        specialinvoke $r4.<edu.mit.icc_unresolvable_intent.InFlowActivity2: void <init>()>();
+        if $i0 == 17 goto label12;
+
+     label9:
+        $r5 = new android.os.Bundle;
+        specialinvoke $r5.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r4.<edu.mit.icc_unresolvable_intent.InFlowActivity2: void onCreate(android.os.Bundle)>($r5);
+        $r5 = null;
+
+     label10:
+        if $i0 == 19 goto label9;
+
+        if $i0 == 20 goto label11;
+
+        if $i0 == 21 goto label9;
+
+        if $i0 == 22 goto label10;
+
+     label11:
+        if $i0 == 23 goto label12;
+
+     label12:
+        if $i0 == 24 goto label0;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+Callback analysis done.
+Warning: TextView is a phantom class!
+Warning: edu.mit.icc_unresolvable_intent.TextView is a phantom class!
+Warning: android.view.TextView is a phantom class!
+Found 1 layout controls in file res/layout/activity_main.xml
+Transforming dummyMainClass... 
+Transforming edu.mit.icc_unresolvable_intent.InFlowActivity... 
+Transforming edu.mit.icc_unresolvable_intent.OutFlowActivity... 
+Transforming edu.mit.icc_unresolvable_intent.InFlowActivity2... 
+Warning: java.lang.ref.Finalizer is a phantom class!
+[main] INFO  soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator  - Generated main method:
+    public static void dummyMainMethod()
+    {
+        int $i0;
+        edu.mit.icc_unresolvable_intent.InFlowActivity $r0;
+        android.os.Bundle $r1, $r3, $r5;
+        edu.mit.icc_unresolvable_intent.OutFlowActivity $r2;
+        edu.mit.icc_unresolvable_intent.InFlowActivity2 $r4;
+
+        $i0 = 0;
+
+     label0:
+        if $i0 == 0 goto label4;
+
+        $r0 = new edu.mit.icc_unresolvable_intent.InFlowActivity;
+        specialinvoke $r0.<edu.mit.icc_unresolvable_intent.InFlowActivity: void <init>()>();
+        if $i0 == 1 goto label4;
+
+     label1:
+        $r1 = new android.os.Bundle;
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r0.<edu.mit.icc_unresolvable_intent.InFlowActivity: void onCreate(android.os.Bundle)>($r1);
+        $r1 = null;
+
+     label2:
+        if $i0 == 4 goto label1;
+
+        if $i0 == 5 goto label3;
+
+        if $i0 == 6 goto label1;
+
+        if $i0 == 7 goto label2;
+
+     label3:
+        if $i0 == 8 goto label4;
+
+     label4:
+        if $i0 == 9 goto label9;
+
+        $r2 = new edu.mit.icc_unresolvable_intent.OutFlowActivity;
+        specialinvoke $r2.<edu.mit.icc_unresolvable_intent.OutFlowActivity: void <init>()>();
+        if $i0 == 10 goto label9;
+
+     label5:
+        $r3 = new android.os.Bundle;
+        specialinvoke $r3.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r2.<edu.mit.icc_unresolvable_intent.OutFlowActivity: void onCreate(android.os.Bundle)>($r3);
+        $r3 = null;
+
+     label6:
+        if $i0 == 11 goto label7;
+
+        staticinvoke <edu.mit.icc_unresolvable_intent.OutFlowActivity: void <clinit>()>();
+
+     label7:
+        if $i0 == 12 goto label6;
+
+        if $i0 == 13 goto label6;
+
+        if $i0 == 14 goto label6;
+
+        if $i0 == 15 goto label5;
+
+        if $i0 == 16 goto label8;
+
+        if $i0 == 17 goto label5;
+
+        if $i0 == 18 goto label6;
+
+     label8:
+        if $i0 == 19 goto label9;
+
+     label9:
+        if $i0 == 20 goto label13;
+
+        $r4 = new edu.mit.icc_unresolvable_intent.InFlowActivity2;
+        specialinvoke $r4.<edu.mit.icc_unresolvable_intent.InFlowActivity2: void <init>()>();
+        if $i0 == 21 goto label13;
+
+     label10:
+        $r5 = new android.os.Bundle;
+        specialinvoke $r5.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r4.<edu.mit.icc_unresolvable_intent.InFlowActivity2: void onCreate(android.os.Bundle)>($r5);
+        $r5 = null;
+
+     label11:
+        if $i0 == 24 goto label10;
+
+        if $i0 == 25 goto label12;
+
+        if $i0 == 26 goto label10;
+
+        if $i0 == 27 goto label11;
+
+     label12:
+        if $i0 == 28 goto label13;
+
+     label13:
+        if $i0 == 29 goto label0;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+Running incremental callback analysis for 3 components...
+Incremental callback analysis done.
+Transforming dummyMainClass... 
+Transforming edu.mit.icc_unresolvable_intent.InFlowActivity... 
+Transforming edu.mit.icc_unresolvable_intent.OutFlowActivity... 
+Transforming edu.mit.icc_unresolvable_intent.InFlowActivity2... 
+[main] INFO  edu.psu.cse.siis.ic3.SetupApplication  - Entry point calculation done.
+[main] INFO  soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator  - Generated main method:
+    public static void dummyMainMethod()
+    {
+        int $i0;
+        edu.mit.icc_unresolvable_intent.InFlowActivity $r0;
+        android.os.Bundle $r1, $r3, $r5;
+        edu.mit.icc_unresolvable_intent.OutFlowActivity $r2;
+        edu.mit.icc_unresolvable_intent.InFlowActivity2 $r4;
+
+        $i0 = 0;
+
+     label0:
+        if $i0 == 0 goto label4;
+
+        $r0 = new edu.mit.icc_unresolvable_intent.InFlowActivity;
+        specialinvoke $r0.<edu.mit.icc_unresolvable_intent.InFlowActivity: void <init>()>();
+        if $i0 == 1 goto label4;
+
+     label1:
+        $r1 = new android.os.Bundle;
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r0.<edu.mit.icc_unresolvable_intent.InFlowActivity: void onCreate(android.os.Bundle)>($r1);
+        $r1 = null;
+
+     label2:
+        if $i0 == 4 goto label1;
+
+        if $i0 == 5 goto label3;
+
+        if $i0 == 6 goto label1;
+
+        if $i0 == 7 goto label2;
+
+     label3:
+        if $i0 == 8 goto label4;
+
+     label4:
+        if $i0 == 9 goto label9;
+
+        $r2 = new edu.mit.icc_unresolvable_intent.OutFlowActivity;
+        specialinvoke $r2.<edu.mit.icc_unresolvable_intent.OutFlowActivity: void <init>()>();
+        if $i0 == 10 goto label9;
+
+     label5:
+        $r3 = new android.os.Bundle;
+        specialinvoke $r3.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r2.<edu.mit.icc_unresolvable_intent.OutFlowActivity: void onCreate(android.os.Bundle)>($r3);
+        $r3 = null;
+
+     label6:
+        if $i0 == 11 goto label7;
+
+        staticinvoke <edu.mit.icc_unresolvable_intent.OutFlowActivity: void <clinit>()>();
+
+     label7:
+        if $i0 == 12 goto label6;
+
+        if $i0 == 13 goto label6;
+
+        if $i0 == 14 goto label6;
+
+        if $i0 == 15 goto label5;
+
+        if $i0 == 16 goto label8;
+
+        if $i0 == 17 goto label5;
+
+        if $i0 == 18 goto label6;
+
+     label8:
+        if $i0 == 19 goto label9;
+
+     label9:
+        if $i0 == 20 goto label13;
+
+        $r4 = new edu.mit.icc_unresolvable_intent.InFlowActivity2;
+        specialinvoke $r4.<edu.mit.icc_unresolvable_intent.InFlowActivity2: void <init>()>();
+        if $i0 == 21 goto label13;
+
+     label10:
+        $r5 = new android.os.Bundle;
+        specialinvoke $r5.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r4.<edu.mit.icc_unresolvable_intent.InFlowActivity2: void onCreate(android.os.Bundle)>($r5);
+        $r5 = null;
+
+     label11:
+        if $i0 == 24 goto label10;
+
+        if $i0 == 25 goto label12;
+
+        if $i0 == 26 goto label10;
+
+        if $i0 == 27 goto label11;
+
+     label12:
+        if $i0 == 28 goto label13;
+
+     label13:
+        if $i0 == 29 goto label0;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.0 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.1 seconds.
+[Spark] Solution found in 0.1 seconds.
+[main] INFO  edu.psu.cse.siis.coal.PropagationSceneTransformer  - Solving propagation problem (iteration 0)
+KNOWN-BUG:While recursing, parameters in this context look the same as the parameters in the callee context. That is a LanguageConstraints.Parameter passed via lc.arguments is really a parameter of this(caller) function, but it will be mistakenly interpreted as a parameter of the callee
+[main] INFO  edu.psu.cse.siis.coal.PropagationSceneTransformer  - Reached a fixed point
+Transforming android.content.Intent... 
+Transforming android.content.IntentFilter... 
+Transforming android.os.Bundle... 
+Transforming android.content.ComponentName... 
+Transforming android.app.Activity... 
+Transforming dummyMainClass... 
+Transforming edu.mit.icc_unresolvable_intent.InFlowActivity... 
+Transforming edu.mit.icc_unresolvable_intent.OutFlowActivity... 
+Transforming edu.mit.icc_unresolvable_intent.InFlowActivity2... 
+*****Result*****
+edu.mit.icc_unresolvable_intent.InFlowActivity/void onCreate(android.os.Bundle) : r3 = virtualinvoke r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(r4)
+    0 : [DroidBench]
+
+edu.mit.icc_unresolvable_intent.InFlowActivity2/void onCreate(android.os.Bundle) : r4 = virtualinvoke r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>(r3)
+    0 : [DroidBench]
+
+edu.mit.icc_unresolvable_intent.OutFlowActivity/void onCreate(android.os.Bundle) : virtualinvoke r0.<edu.mit.icc_unresolvable_intent.OutFlowActivity: void startActivity(android.content.Intent)>(r4)
+    0 : Value: 2 path values
+  action=[edu.mit.icc_unresolvable_intent.ACTION, ],extras=[DroidBench, ],
+  action=[edu.mit.icc_unresolvable_intent.EDIT, ],extras=[DroidBench, ],
+
+
+[main] INFO  edu.psu.cse.siis.ic3.ResultProcessor  - edu.mit.icc_unresolvable_intent 523 21 1812 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 2 127 4518 91 1530 12 278 1 24 2825 329 9620
+
