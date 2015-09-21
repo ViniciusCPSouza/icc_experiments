@@ -1,0 +1,6 @@
+deps
+deps/*
+*~
+epicc.jar
+ic3.jar
+android.jar
