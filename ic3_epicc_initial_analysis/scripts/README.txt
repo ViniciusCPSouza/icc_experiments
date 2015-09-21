@@ -13,6 +13,9 @@ Their execution times and outputs were consolidated and then compared.
 
       Android SDK: http://dl.google.com/android/android-sdk_r24.3.4-linux.tgz
 
+<------------------- @Vinicius, I think it is a good idea to automate these previous step to avoid misconfiguration. Please take a look at script download-deps.sh.  I will run the following steps once you make sure download-deps is correct (there are some missing parts that you can fill).  Thanks!
+
+
   - run the 'setup.sh' script:
 
       ./setup.sh <path to the android jar> <path to the ic3 jar> <path to the epicc jar> <path to the dare script> <path to apks folder>
