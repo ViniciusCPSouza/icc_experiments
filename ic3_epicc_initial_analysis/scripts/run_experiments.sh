@@ -6,11 +6,35 @@
 # Note: You have to run setup.sh first in order to create the symbolic links
 # needed by this script.
 #
-# Usage: ./run_experiments.sh
+# Note 2: Use the --sequential option if you don't want both tools to run at the same time.
+#
+# Usage: ./run_experiments.sh [--sequential]
 # ---------------------------
 
+# -- init code
 APK_COUNT=0
+mkdir ic3_results epicc_results
 
+SEQUENTIAL=0
+
+# -- parsing the args
+usage() { echo "Usage: $0 [--sequential]"; exit 1; }
+
+while [ ! $# -eq 0 ]
+do
+    case "$1" in
+        --sequential)
+            SEQUENTIAL=1
+            ;;
+        *)
+            usage
+            ;;
+    esac
+    shift
+done
+
+
+# -- loop through the 'apks' folder
 for apk in `ls apks`;
 do
 
@@ -34,30 +58,59 @@ do
 
   # -- run epicc on the background and get its PID
   epicc_cmd="java -Xmx2g -jar epicc -apk \"$apk_path\" -android-directory \
-            \"$retargeted_dir\" -cp android -icc-study epicc_results"
+           \"$retargeted_dir\" -cp android -icc-study epicc_results"
 
-  { time { eval $epicc_cmd > epicc_output; }; } &> epicc_time &
+  { time { eval $epicc_cmd &> epicc_output; }; } &> epicc_time &
 
   epicc_pid="$!"
 
+  # sequential execution
+  if [[ $SEQUENTIAL == 1 ]]; then
+
+    echo -e "\n"
+    echo "Epicc is running on apk \"$apk\", with PID: $epicc_pid"
+
+    echo -e "\n"
+    echo "Waiting for it to finish..."
+
+    wait
+
+  fi
+
   # -- run ic3 on the background and get its PID
   ic3_cmd="java -Xmx2g -jar ic3 -apkormanifest \"$apk_path\" \
-           -input \"$retargeted_dir\" -cp android -output ic3_results"
+          -input \"$retargeted_dir\" -cp android -output ic3_results"
 
   { time { eval $ic3_cmd > ic3_output; }; } &> ic3_time &
 
   ic3_pid="$!"
 
-  # -- printing some info
-  echo -e "\n"
-  echo "Epicc is running on apk \"$apk\", with PID: $epicc_pid"
-  echo "IC3 is running on apk \"$apk\", with PID: $ic3_pid"
+  # sequential execution
+  if [[ $SEQUENTIAL == 1 ]]; then
 
-  echo -e "\n"
-  echo "Waiting for Epicc and IC3 to finish their analysis..."
+    echo -e "\n"
+    echo "IC3 is running on apk \"$apk\", with PID: $ic3_pid"
 
-  # waiting for the background jobs to finish
-  wait
+    echo -e "\n"
+    echo "Waiting for it to finish..."
+
+    wait
+
+  fi
+
+  # parallel execution
+  if [[ $SEQUENTIAL != 1 ]]; then
+
+    echo -e "\n"
+    echo "Epicc is running on apk \"$apk\", with PID: $epicc_pid"
+    echo "IC3 is running on apk \"$apk\", with PID: $ic3_pid"
+
+    echo -e "\n"
+    echo "Waiting for them to finish..."
+
+    wait
+
+  fi
 
   echo -e "\n"
   echo "Both Epicc and IC3 finished analysing the apk!"
@@ -78,23 +131,17 @@ do
   mv ic3_output $ic3_results_folder
   mv epicc_output $epicc_results_folder
 
-  # -- remove all the data from this run
-  rm -rf ic3_results/*
-  rm -rf epicc_results/*
-
-  rm -f ic3_time
-  rm -f epicc_time
-
-  rm -f ic3_output
-  rm -f epicc_output
-
-  rm -rf sootOutput
-
 done
 
 echo -e "\n"
 echo "****************"
 echo "All $APK_COUNT apks were analysed!"
 
-# -- Consolidating the results in a spreadsheet
+# -- removing some artifacts
+rm -rf retargeted
+rm -rf ic3_results
+rm -rf epicc_results
+rm -rf sootOutput
+
+# -- consolidating the results in a spreadsheet
 ./consolidate.py results

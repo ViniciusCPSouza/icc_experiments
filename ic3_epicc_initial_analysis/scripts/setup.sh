@@ -10,7 +10,7 @@
 # Dare: https://github.com/dare-android/platform_dalvik/releases/download/dare-1.1.0/dare-1.1.0-linux.tgz
 # Apks suggestion: https://github.com/secure-software-engineering/DroidBench
 #
-# Usage: ./setup.sh <path to the ic3 jar> <path to the epicc jar> <path to apks folder>
+# Usage: ./setup.sh <path to the android jar> <path to the ic3 jar> <path to the epicc jar> <path to the dare script> <path to apks folder>
 # ---------------------------
 
 ANDROID_JAR="${1}"
