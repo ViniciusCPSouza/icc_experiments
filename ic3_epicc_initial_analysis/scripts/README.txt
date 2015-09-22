@@ -3,26 +3,13 @@ Their execution times and outputs were consolidated and then compared.
 
 # Steps
 
-  - Download epicc, ic3 and dare and then decompress the archives:
+  - run the 'download-deps.sh' script:
 
-      IC3: https://github.com/siis/ic3/releases/download/v0.1.0/ic3-0.1.0-bin.tgz
-      Epicc dowload link: http://siis.cse.psu.edu/epicc/downloads/epicc-0.1.tgz
-      Dare: https://github.com/dare-android/platform_dalvik/releases/download/dare-1.1.0/dare-1.1.0-linux.tgz
-
-  - epicc and ic3 come with an android.jar, but you can also download the Android sdk:
-
-      Android SDK: http://dl.google.com/android/android-sdk_r24.3.4-linux.tgz
-
-<------------------- @Vinicius, I think it is a good idea to automate these previous step to avoid misconfiguration. Please take a look at script download-deps.sh.  I will run the following steps once you make sure download-deps is correct (there are some missing parts that you can fill).  Thanks!
-
-
-  - run the 'setup.sh' script:
-
-      ./setup.sh <path to the android jar> <path to the ic3 jar> <path to the epicc jar> <path to the dare script> <path to apks folder>
+      ./download-deps.sh
 
   - run the './run_experiments.sh' script:
 
-      ./run_experiments.sh [--sequential]
+      ./run_experiments.sh [--sequential] [-a apks_folder]
 
   The results (execution time, console output and output files) of the executions will be under the 'results' folder.
 

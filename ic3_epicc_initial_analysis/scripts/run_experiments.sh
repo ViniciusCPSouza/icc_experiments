@@ -3,19 +3,21 @@
 # ---------------------------
 # Runs Epicc and IC3 on every apk from the 'apks' folder.
 #
-# Note: You have to run setup.sh first in order to create the symbolic links
+# Note: You have to run download_deps.sh first in order to create the symbolic links
 # needed by this script.
 #
 # Note 2: Use the --sequential option if you don't want both tools to run at the same time.
 #
-# Usage: ./run_experiments.sh [--sequential]
+# Usage: ./run_experiments.sh [--sequential] [-a apks_folder]
 # ---------------------------
 
 # -- init code
 APK_COUNT=0
 mkdir ic3_results epicc_results
 
+# -- default values
 SEQUENTIAL=0
+INPUT_FOLDER="`pwd`/deps/DroidBench/apk/InterComponentCommunication"
 
 # -- parsing the args
 usage() { echo "Usage: $0 [--sequential]"; exit 1; }
@@ -26,12 +28,18 @@ do
         --sequential)
             SEQUENTIAL=1
             ;;
+        -a)
+            INPUT_FOLDER="$2"
+            shift
+            ;;
         *)
             usage
             ;;
     esac
     shift
 done
+
+ln -fs "$INPUT_FOLDER" apks
 
 
 # -- loop through the 'apks' folder
@@ -57,8 +65,8 @@ do
   retargeted_dir="$dare_output_dir/retargeted/$apk_name/"
 
   # -- run epicc on the background and get its PID
-  epicc_cmd="java -Xmx2g -jar epicc -apk \"$apk_path\" -android-directory \
-           \"$retargeted_dir\" -cp android -icc-study epicc_results"
+  epicc_cmd="java -Xmx2g -jar epicc.jar -apk \"$apk_path\" -android-directory \
+           \"$retargeted_dir\" -cp android.jar -icc-study epicc_results"
 
   { time { eval $epicc_cmd &> epicc_output; }; } &> epicc_time &
 
@@ -78,8 +86,8 @@ do
   fi
 
   # -- run ic3 on the background and get its PID
-  ic3_cmd="java -Xmx2g -jar ic3 -apkormanifest \"$apk_path\" \
-          -input \"$retargeted_dir\" -cp android -output ic3_results"
+  ic3_cmd="java -Xmx2g -jar ic3.jar -apkormanifest \"$apk_path\" \
+          -input \"$retargeted_dir\" -cp android.jar -output ic3_results"
 
   { time { eval $ic3_cmd > ic3_output; }; } &> ic3_time &
 
@@ -118,7 +126,7 @@ do
   # -- handling the results (files generated, time results, etc)
 
   epicc_results_folder="results/$apk_name/epicc"
-  ic3_results_folder="results/$apk_name/icc"
+  ic3_results_folder="results/$apk_name/ic3"
 
   mkdir -p $epicc_results_folder $ic3_results_folder
 
