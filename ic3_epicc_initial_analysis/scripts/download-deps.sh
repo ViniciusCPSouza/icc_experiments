@@ -11,6 +11,10 @@
 # Apks suggestion: https://github.com/secure-software-engineering/DroidBench
 
 # should be run with sudo!
+# @Vinicius: it is fine.  but in general it is safer to ask the user to install (providing the command) if some specific tool is not installed
+
+# Good job, Vinicius.  Some TODOs for later (not critical for now):
+# - it is good practice to avoid unneded downloads.  for example, epicc will be downloaded if one runs this script twice
 
 ANDROID_VERSION="23"
 
@@ -86,6 +90,7 @@ mkdir -p deps
 
 (cd deps
 
+### android SDK
 if onLinux; then
   downloadDecompress "android-sdk" http://dl.google.com/android/android-sdk_r24.3.4-linux.tgz
 elif onMac; then
@@ -95,9 +100,13 @@ else
   exit 1
 fi
 
+### IC3
 downloadDecompress "ic3" https://github.com/siis/ic3/releases/download/v0.1.0/ic3-0.1.0-bin.tgz
+
+### Epicc
 downloadDecompress "epicc"  http://siis.cse.psu.edu/epicc/downloads/epicc-0.1.tgz
 
+### Dare
 if onLinux; then
   downloadDecompress "dare" https://github.com/dare-android/platform_dalvik/releases/download/dare-1.1.0/dare-1.1.0-linux.tgz
 elif onMac; then
@@ -135,6 +144,7 @@ fi
 # @ Marcelo: We still clone the DroidBench repository, but the choice of which
 # apk folder should be used as input to IC3 and Epicc is given as an argument
 # of the run_experiments.sh script -V
+# @ Vinicius: OK -M
 
 # mkdir droidbench-apks; cd droidbench-apks
 # for x in `find ../DroidBench -name "*.apk"`
@@ -168,4 +178,5 @@ ln -fs `find deps/ic3* -name "ic3*.jar"` ic3.jar
 ln -fs `find deps -name "epicc*.jar"` epicc.jar
 ### @Vinicius: Please check.  I am not sure what you want.  maybe this is an executable whose bin should be appended to the PATH.  -M
 ### @Marcelo: I was avoiding messing with the environment variables as long as I could. Do you agree with the following approach? -V
+### @Vinicius: OK.  Please remove this comments.  
 ln -fs `find deps/dare* -name dare` dare
