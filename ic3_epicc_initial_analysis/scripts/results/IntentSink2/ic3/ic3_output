@@ -1,0 +1,162 @@
+Warning: java.lang.ref.Finalizer is a phantom class!
+[main] INFO  soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator  - Generated main method:
+    public static void dummyMainMethod()
+    {
+        int $i0;
+        de.ecspride.IntentSink2 $r0;
+        android.os.Bundle $r1;
+
+        $i0 = 0;
+
+     label0:
+        if $i0 == 0 goto label4;
+
+        $r0 = new de.ecspride.IntentSink2;
+        specialinvoke $r0.<de.ecspride.IntentSink2: void <init>()>();
+        if $i0 == 1 goto label4;
+
+     label1:
+        $r1 = new android.os.Bundle;
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r0.<de.ecspride.IntentSink2: void onCreate(android.os.Bundle)>($r1);
+        $r1 = null;
+
+     label2:
+        if $i0 == 3 goto label1;
+
+        if $i0 == 4 goto label3;
+
+        if $i0 == 5 goto label1;
+
+        if $i0 == 6 goto label2;
+
+     label3:
+        if $i0 == 7 goto label4;
+
+     label4:
+        if $i0 == 8 goto label0;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+Callback analysis done.
+Warning: EditText is a phantom class!
+Warning: de.ecspride.EditText is a phantom class!
+Warning: android.view.EditText is a phantom class!
+Warning: requestFocus is a phantom class!
+Warning: de.ecspride.requestFocus is a phantom class!
+Warning: android.view.requestFocus is a phantom class!
+Warning: android.widget.requestFocus is a phantom class!
+Warning: android.webkit.requestFocus is a phantom class!
+Warning: Button is a phantom class!
+Warning: de.ecspride.Button is a phantom class!
+Warning: android.view.Button is a phantom class!
+Found 2 layout controls in file res/layout/activity_intent_sink2.xml
+Transforming dummyMainClass... 
+Transforming de.ecspride.IntentSink2... 
+Warning: java.lang.ref.Finalizer is a phantom class!
+[main] INFO  soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator  - Generated main method:
+    public static void dummyMainMethod()
+    {
+        int $i0;
+        de.ecspride.IntentSink2 $r0;
+        android.os.Bundle $r1;
+
+        $i0 = 0;
+
+     label0:
+        if $i0 == 0 goto label4;
+
+        $r0 = new de.ecspride.IntentSink2;
+        specialinvoke $r0.<de.ecspride.IntentSink2: void <init>()>();
+        if $i0 == 1 goto label4;
+
+     label1:
+        $r1 = new android.os.Bundle;
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r0.<de.ecspride.IntentSink2: void onCreate(android.os.Bundle)>($r1);
+        $r1 = null;
+
+     label2:
+        if $i0 == 4 goto label1;
+
+        if $i0 == 5 goto label3;
+
+        if $i0 == 6 goto label1;
+
+        if $i0 == 7 goto label2;
+
+     label3:
+        if $i0 == 8 goto label4;
+
+     label4:
+        if $i0 == 9 goto label0;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+Running incremental callback analysis for 1 components...
+Incremental callback analysis done.
+Transforming dummyMainClass... 
+Transforming de.ecspride.IntentSink2... 
+[main] INFO  edu.psu.cse.siis.ic3.SetupApplication  - Entry point calculation done.
+[main] INFO  soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator  - Generated main method:
+    public static void dummyMainMethod()
+    {
+        int $i0;
+        de.ecspride.IntentSink2 $r0;
+        android.os.Bundle $r1;
+
+        $i0 = 0;
+
+     label0:
+        if $i0 == 0 goto label4;
+
+        $r0 = new de.ecspride.IntentSink2;
+        specialinvoke $r0.<de.ecspride.IntentSink2: void <init>()>();
+        if $i0 == 1 goto label4;
+
+     label1:
+        $r1 = new android.os.Bundle;
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+        virtualinvoke $r0.<de.ecspride.IntentSink2: void onCreate(android.os.Bundle)>($r1);
+        $r1 = null;
+
+     label2:
+        if $i0 == 4 goto label1;
+
+        if $i0 == 5 goto label3;
+
+        if $i0 == 6 goto label1;
+
+        if $i0 == 7 goto label2;
+
+     label3:
+        if $i0 == 8 goto label4;
+
+     label4:
+        if $i0 == 9 goto label0;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.0 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.0 seconds.
+[Spark] Solution found in 0.0 seconds.
+[main] INFO  edu.psu.cse.siis.coal.PropagationSceneTransformer  - Solving propagation problem (iteration 0)
+[main] INFO  edu.psu.cse.siis.coal.PropagationSceneTransformer  - Reached a fixed point
+Transforming android.content.Intent... 
+Transforming android.content.IntentFilter... 
+Transforming android.os.Bundle... 
+Transforming android.content.ComponentName... 
+Transforming android.app.Activity... 
+Transforming dummyMainClass... 
+Transforming de.ecspride.IntentSink2... 
+*****Result*****
+[main] INFO  edu.psu.cse.siis.ic3.ResultProcessor  - de.ecspride 298 11 425 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 111 5061 117 1258 15 114 0 3 2866 223 9659
+

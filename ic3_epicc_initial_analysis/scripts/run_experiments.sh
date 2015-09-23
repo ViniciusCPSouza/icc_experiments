@@ -152,4 +152,10 @@ rm -rf epicc_results
 rm -rf sootOutput
 
 # -- consolidating the results in a spreadsheet
+source /usr/local/bin/virtualenvwrapper.sh
+
+workon icc_experiments
+
 ./consolidate.py results
+
+deactivate
