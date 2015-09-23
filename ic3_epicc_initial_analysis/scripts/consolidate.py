@@ -19,6 +19,7 @@ from collections import OrderedDict
 import xlsxwriter
 
 # constants
+# TODO: encapsulate this info in objects
 EXECUTION_TIME_RESULT = "execution_time"
 OUTPUT_RESULT = "output"
 ARTIFACT_RESULT = "artifact"
