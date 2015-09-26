@@ -153,6 +153,32 @@ fi
 # done
 ) ## leaving dir deps
 
+## python dependencies
+if onLinux; then
+
+  sudo apt-get install python-pip
+
+elif onMac; then
+
+  sudo easy_install pip
+
+else
+
+  echo "$(uname -s) is not a supported OS!"
+  exit 1
+
+fi
+
+sudo pip install virtualenv virtualenvwrapper
+
+mkdir -p "$HOME/.virtualenvs"
+
+source /usr/local/bin/virtualenvwrapper.sh
+
+mkvirtualenv icc_experiments -p python3
+
+pip install -r requirements.txt
+
 ## create symbolic links
 
 if onLinux; then

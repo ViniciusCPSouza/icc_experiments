@@ -1,7 +1,7 @@
 [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
 [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
-[Spark] Pointer Assignment Graph in 0.0 seconds.
-[Spark] Type masks in 0.1 seconds.
+[Spark] Pointer Assignment Graph in 0.2 seconds.
+[Spark] Type masks in 0.0 seconds.
 [Spark] Pointer Graph simplified in 0.0 seconds.
 [Spark] Propagation in 0.0 seconds.
 [Spark] Solution found in 0.0 seconds.

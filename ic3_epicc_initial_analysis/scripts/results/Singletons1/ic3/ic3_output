@@ -1,0 +1,80 @@
+Warning: java.lang.ref.Finalizer is a phantom class!
+Warning: edu.mit.AnotherActivity is a phantom class!
+Warning: edu.mit.MainActivity is a phantom class!
+[main] INFO  soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator  - Generated main method:
+    public static void dummyMainMethod()
+    {
+        int $i0;
+
+        $i0 = 0;
+
+     label0:
+        if $i0 == 0 goto label1;
+
+        if $i0 == 1 goto label1;
+
+     label1:
+        if $i0 == 2 goto label2;
+
+        if $i0 == 3 goto label2;
+
+     label2:
+        if $i0 == 4 goto label0;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+Callback analysis done.
+Warning: TextView is a phantom class!
+Warning: edu.mit.TextView is a phantom class!
+Warning: android.view.TextView is a phantom class!
+Found 0 layout controls in file res/layout/activity_main.xml
+Transforming dummyMainClass... 
+Transforming edu.mit.AnotherActivity... 
+Transforming edu.mit.MainActivity... 
+[main] INFO  edu.psu.cse.siis.ic3.SetupApplication  - Entry point calculation done.
+Warning: edu.mit.AnotherActivity is a phantom class!
+Warning: edu.mit.MainActivity is a phantom class!
+[main] INFO  soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator  - Generated main method:
+    public static void dummyMainMethod()
+    {
+        int $i0;
+
+        $i0 = 0;
+
+     label0:
+        if $i0 == 0 goto label1;
+
+        if $i0 == 1 goto label1;
+
+     label1:
+        if $i0 == 2 goto label2;
+
+        if $i0 == 3 goto label2;
+
+     label2:
+        if $i0 == 4 goto label0;
+
+        return;
+    }
+
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.1 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.0 seconds.
+[Spark] Solution found in 0.0 seconds.
+[main] INFO  edu.psu.cse.siis.coal.PropagationSceneTransformer  - Solving propagation problem (iteration 0)
+[main] INFO  edu.psu.cse.siis.coal.PropagationSceneTransformer  - Reached a fixed point
+Transforming android.content.Intent... 
+Transforming android.content.IntentFilter... 
+Transforming android.os.Bundle... 
+Transforming android.content.ComponentName... 
+Transforming android.app.Activity... 
+Transforming dummyMainClass... 
+Transforming edu.mit.AnotherActivity... 
+Transforming edu.mit.MainActivity... 
+*****Result*****
+[main] INFO  edu.psu.cse.siis.ic3.ResultProcessor  - edu.mit 18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 108 3125 35 1873 15 527 0 1 2569 314 8460
+
