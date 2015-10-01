@@ -67,6 +67,7 @@ def main():
 
                 out.write("%s: %s\n" % (component.name, elem))
 
+
 if __name__ == "__main__":
 
     main()
